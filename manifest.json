@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Universal Contact Extractor",
+  "version": "1.0",
+  "description": "Extract email, phone, and social media info from any website footer.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icone16.png",
+      "48": "images/icone48.png",
+      "128": "images/icone128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icone16.png",
+    "48": "images/icone48.png",
+    "128": "images/icone128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
